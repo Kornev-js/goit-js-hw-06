@@ -1,3 +1,5 @@
+"use strict";
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -6,3 +8,18 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+
+// Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
+// Добавит название ингредиента как его текстовое содержимое.
+// Добавит элементу класс item.
+// После чего вставит все <li> за одну операцию в список ul.ingredients.
+const ulList = document.getElementById("ingredients");
+const allIngredients = ingredients.forEach(ingredient => {
+  const list = document.createElement("li");
+  list.classList.toggle("item")
+  list.innerHTML = ingredient;
+  ulList.append(list);
+ 
+
+})

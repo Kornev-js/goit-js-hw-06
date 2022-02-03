@@ -12,3 +12,31 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// function rendalList() {
+//   const markup = books.map(({title}) => {
+//     return  `<li>
+//       <p>${title}</p>
+//       <button type="button">Edit</button>
+//       <button type="button">Delete</button>
+//       </li>`
+      
+//   }).join('')
+//   bookListRef.insertAdjacentHTML("afterbegin", markup)
+// }
+
+
+const galleryRef = document.querySelector('ul');
+
+
+function galleryList() {
+  const markup = images.map(({url, alt}) =>{
+    return `
+    <li><img src="${url}" alt="${alt}" width="150px" height="100vpx"></a></li>
+    
+    `
+  }).join('')
+  galleryRef.insertAdjacentHTML("afterbegin", markup)
+}
+galleryList(images)
+
