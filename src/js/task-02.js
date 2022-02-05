@@ -19,7 +19,10 @@ const allIngredients = ingredients.map(ingredient => {
   const list = document.createElement("li");
   list.classList.toggle("item")
   list.innerHTML = ingredient;
-  ulList.append(list);
- 
+  return list;
+});
 
-})
+ulList.append(...allIngredients)
+
+
+//если не так, то я не знаю, что от меня требуется:)
