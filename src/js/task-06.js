@@ -4,11 +4,11 @@ const inputData = Number(validatedInput.dataset.length);
 
 validatedInput.addEventListener('blur', () =>{
     const validatedInputLength = validatedInput.value.length;
-    if (validatedInputLength !== inputData){
-        replaceClasses('invalid', 'valid');
+    if (validatedInputLength === inputData){
+        replaceClasses('valid', 'invalid' );
         return
     }
-    replaceClasses('valid', 'invalid')
+    replaceClasses('invalid','valid' )
 })
 
 

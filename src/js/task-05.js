@@ -5,16 +5,11 @@ const refs = {
 }
 
 const handleInput = () => {
-    let userMsg = "";
-    if (!refs.input.value){
-         userMsg = "Anonymous"
-        refs.output.innerHTML =  userMsg
-    }else {
+    let userMsg = (!refs.input.value)? "Anonymous" : refs.input.value;
+    return refs.output.innerHTML =  userMsg
+   
 
-        userMsg = refs.input.value
-        refs.output.innerHTML =  userMsg
-        
-    }
+    
     
     
     
