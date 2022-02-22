@@ -8,10 +8,20 @@
 const allCategories = document.querySelectorAll('.item')
 console.log(`Number of elements: ${allCategories.length}`)
 
-const categoriesArray = [...allCategories]
-  .map(
-    categories => `Categorie: ${categories.children[0].textContent}
-Elements: ${categories.children[1].children.length}`
-  )
-  .join("\n");
-console.log(categoriesArray);
+// const categoriesArray = [...allCategories]
+//   .map(
+//     categories => `Categorie: ${categories.children[0].textContent}
+// Elements: ${categories.children[1].children.length}`                  это оставлю, вдруг пригодится)
+//   )
+//   .join("\n");
+// console.log(categoriesArray);
+
+
+function task1() {
+  allCategories.forEach(categorie => {
+    console.log("Categorie:", categorie.children[0].textContent)
+    console.log("Elements:", categorie.querySelectorAll("li").length)
+  })
+}
+
+task1()

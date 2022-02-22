@@ -22,6 +22,7 @@ function onFormSubmit(event) {
             email: inputEmail.value,
             password: inputPass.value,
         };
+        console.log(formData)
         loginForm.reset();
     }
 }
